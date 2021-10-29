@@ -16,9 +16,9 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @Slf4j
 class IleIweApplicationTests {
 
-//	@Test
-//	void contextLoads() {
-//	}
+	@Test
+	void contextLoads() {
+	}
 
 	@Autowired
 	private DataSource dataSource;
@@ -31,6 +31,7 @@ class IleIweApplicationTests {
 		try{
 			Connection connection = dataSource.getConnection();
 			assertThat(connection).isNotNull();
+			assertThat(connection.getCatalog()).isEqualTo("ilewedb");
 			log.info("DataSource->{}", connection.getCatalog());
 		}catch (SQLException exception){
 			log.info("An exception occurred ->{}", exception.getMessage());
