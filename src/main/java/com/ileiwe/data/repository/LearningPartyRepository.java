@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface LearningPartyRepository extends JpaRepository<LearningParty, Long> {
 
-
+    LearningParty findByEmail(String email);
 
 }
