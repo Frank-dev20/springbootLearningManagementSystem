@@ -77,7 +77,7 @@ class InstructorRepositoryTest {
         Instructor savedInstructor =
                 instructorRepository.findById(instructor.getId()).orElse(null);
 
-        log.info("Saved instrutor ->{}", instructor);
+        log.info("Saved instructor ->{}", instructor);
 
         //assert that savedInstructor is not null
         assertThat(savedInstructor).isNotNull();
